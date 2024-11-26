@@ -23,7 +23,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
     /** Local environment */
-    define('DB_HOST', 'local.bgmotion.com.tw:3333');
+    define('DB_HOST', 'smokedgoose-wordpress.rwlb.rds.aliyuncs.com');
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
     /** MySQL database username */
