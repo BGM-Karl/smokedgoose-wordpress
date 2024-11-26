@@ -22,22 +22,6 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-$onGae = (getenv('GAE_ENV') === 'standard');
-
-if ($onGae) {
-	define('DB_NAME', getenv('DB_NAME'));
-	/** MySQL database username */
-	define('DB_USER', getenv('DB_USER'));
-	/** MySQL database password */
-	define('DB_PASSWORD', getenv('DB_PASSWORD'));
-	/** MySQL hostname (使用 Cloud SQL 連接名稱) */
-	define('DB_HOST', getenv('DB_HOST'));
-
-	// 更改網址
-	define('WP_HOME','https://wpjs-442309.de.r.appspot.com');
-	define('WP_SITEURL','https://wpjs-442309.de.r.appspot.com');
-	$_SERVER['HTTPS'] = 'on';
-} else {
     /** Local environment */
     define('DB_HOST', 'local.bgmotion.com.tw:3333');
     /** The name of the database for WordPress */
@@ -46,6 +30,13 @@ if ($onGae) {
     define('DB_USER', 'karl');
     /** MySQL database password */
     define('DB_PASSWORD', 'Aa3345678');
+$onGae = (getenv('GAE_ENV') === 'standard');
+
+if ($onGae) {
+	// 更改網址
+	define('WP_HOME','https://wpjs-442309.de.r.appspot.com');
+	define('WP_SITEURL','https://wpjs-442309.de.r.appspot.com');
+	$_SERVER['HTTPS'] = 'on';
 }
 
 /** Database charset to use in creating database tables. */
