@@ -1948,7 +1948,8 @@ class wpdb {
 	public function db_connect( $allow_bail = true ) {
 		$this->is_mysql = true;
 
-		$client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : 0;
+		// $client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : 0;
+		$client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : MYSQL_CLIENT_SSL;
 
 		/*
 		 * Set the MySQLi error reporting off because WordPress handles its own.

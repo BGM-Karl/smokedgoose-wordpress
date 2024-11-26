@@ -22,8 +22,6 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-defined( 'MYSQL_CLIENT_FLAGS',  MYSQLI_CLIENT_SSL);
-
 $onGae = (getenv('GAE_ENV') === 'standard');
 
 if ($onGae) {
