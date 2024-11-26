@@ -44,6 +44,11 @@ if ( function_exists( 'error_reporting' ) ) {
  *
  * If neither set of conditions is true, initiate loading the setup process.
  */
+echo "我在這裡";
+echo ABSPATH . 'wp-config.php';
+echo '<br>';
+echo file_exists( ABSPATH . 'wp-config.php' );
+
 if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
 
 	/** The config file resides in ABSPATH */
