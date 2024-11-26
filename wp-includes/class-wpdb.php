@@ -1948,8 +1948,7 @@ class wpdb {
 	public function db_connect( $allow_bail = true ) {
 		$this->is_mysql = true;
 
-		// $client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : 0;
-		$client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : MYSQL_CLIENT_SSL;
+		$client_flags = defined( 'MYSQL_CLIENT_FLAGS' ) ? MYSQL_CLIENT_FLAGS : 0;
 
 		/*
 		 * Set the MySQLi error reporting off because WordPress handles its own.
@@ -1978,6 +1977,8 @@ class wpdb {
 		if ( $is_ipv6 && extension_loaded( 'mysqlnd' ) ) {
 			$host = "[$host]";
 		}
+
+		$client_flags = MYSQLI_CLIENT_SSL; // 使用 SSL 连接
 
 		if ( WP_DEBUG ) {
 			mysqli_real_connect( $this->dbh, $host, $this->dbuser, $this->dbpassword, null, $port, $socket, $client_flags );
