@@ -39,13 +39,13 @@ if ($onGae) {
 	$_SERVER['HTTPS'] = 'on';
 } else {
     /** Local environment */
-    define('DB_HOST', 'serverless-us-central1.sysp0000.db2.skysql.com:4009');
+    define('DB_HOST', 'local.bgmotion.com.tw:3333');
     /** The name of the database for WordPress */
     define('DB_NAME', 'wordpress');
     /** MySQL database username */
-    define('DB_USER', 'dbpgf09274233');
+    define('DB_USER', 'karl');
     /** MySQL database password */
-    define('DB_PASSWORD', 'Aa3345678!');
+    define('DB_PASSWORD', 'Aa3345678');
 }
 
 /** Database charset to use in creating database tables. */
@@ -102,7 +102,7 @@ define('WP_ALLOW_MULTISITE', true);
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', false );
+	define( 'WP_DEBUG', true );
 }
 
 /* That's all, stop editing! Happy publishing. */
