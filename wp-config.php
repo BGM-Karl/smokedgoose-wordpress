@@ -1,4 +1,5 @@
 <?php
+
 //Begin Really Simple Security session cookie settings
 @ini_set('session.cookie_httponly', true);
 @ini_set('session.cookie_secure', true);
@@ -136,7 +137,9 @@ define( 'WP_DEBUG', true );
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+	// define( 'ABSPATH', __DIR__ . '/' );
+	define( 'ABSPATH', '/workspace/vendor/smokedgoose/wordpress/' );
+
 }
 
 /** Sets up WordPress vars and included files. */
