@@ -1978,7 +1978,7 @@ class wpdb {
 			$host = "[$host]";
 		}
 
-		$client_flags = MYSQLI_CLIENT_SSL; // 使用 SSL 连接
+		// $client_flags = MYSQLI_CLIENT_SSL; // 使用 SSL 连接
 
 		if ( WP_DEBUG ) {
 			mysqli_real_connect( $this->dbh, $host, $this->dbuser, $this->dbpassword, null, $port, $socket, $client_flags );
