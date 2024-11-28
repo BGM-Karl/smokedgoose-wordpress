@@ -22,22 +22,17 @@
  */
 
 // ** Database settings - You can get this info from your web host ** //
-    /** Local environment */
-    define('DB_HOST', 'smokedgoose-wordpress.rwlb.rds.aliyuncs.com');
-    /** The name of the database for WordPress */
-    define('DB_NAME', 'wordpress');
-    /** MySQL database username */
-    define('DB_USER', 'karl');
-    /** MySQL database password */
-    define('DB_PASSWORD', 'Aa3345678');
-$onGae = (getenv('GAE_ENV') === 'standard');
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
 
-if ($onGae) {
-	// 更改網址
-	define('WP_HOME','https://wpjs-442309.de.r.appspot.com');
-	define('WP_SITEURL','https://wpjs-442309.de.r.appspot.com');
-	$_SERVER['HTTPS'] = 'on';
-}
+/** Database username */
+define( 'DB_USER', 'karl' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'Aa3345678' );
+
+/** Database hostname */
+define( 'DB_HOST', 'smokedgoose-wordpress.rwlb.rds.aliyuncs.com:3306' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -93,7 +88,7 @@ define('WP_ALLOW_MULTISITE', true);
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 if ( ! defined( 'WP_DEBUG' ) ) {
-	define( 'WP_DEBUG', true );
+	define( 'WP_DEBUG', false );
 }
 
 /* That's all, stop editing! Happy publishing. */
